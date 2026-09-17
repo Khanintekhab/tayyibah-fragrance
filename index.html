@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tayyibah Fragrance | Timeless Scents, Pure Heritage</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: {
+                            950: '#03120b',
+                            900: '#081c15',
+                            800: '#1b4332',
+                            700: '#2d6a4f',
+                        },
+                        gold: {
+                            100: '#fcf8e3',
+                            300: '#f3e5ab',
+                            400: '#e5c158',
+                            500: '#d4af37',
+                            600: '#aa820a',
+                            700: '#886200',
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Cinzel', 'serif'],
+                        body: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #03120b;
+            color: #f3e5ab;
+        }
+        .font-heading {
+            font-family: 'Cinzel', serif;
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #fff2ac 0%, #d4af37 50%, #aa820a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-gradient-bg {
+            background: linear-gradient(135deg, #f3e5ab 0%, #d4af37 50%, #aa820a 100%);
+        }
+        .gold-border {
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+        .gold-border-glow:hover {
+            border-color: rgba(212, 175, 55, 0.8);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.25);
+        }
+        .glass-panel {
+            background: rgba(8, 28, 21, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #03120b;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2d6a4f;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d4af37;
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden text-amber-50">
+
+    <div class="bg-gradient-to-r from-emerald-950 via-emerald-800 to-emerald-950 border-b border-gold-500/30 text-gold-300 text-xs py-2 px-4 text-center font-medium tracking-widest uppercase flex justify-between items-center px-6">
+        <span class="hidden md:inline"><i class="fa-solid fa-gem mr-2 text-gold-500"></i>100% Pure, Alcohol-Free Luxury Attars</span>
+        <span class="mx-auto md:mx-0"><i class="fa-solid fa-truck-fast mr-2 text-gold-500"></i>Complimentary Shipping on Orders Over ₹999</span>
+        <span class="hidden md:inline"><i class="fa-solid fa-certificate mr-2 text-gold-500"></i>Handcrafted In India</span>
+    </div>
+
+    <header class="sticky top-0 z-40 glass-panel border-b border-gold-500/20 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-btn" class="md:hidden text-gold-400 hover:text-gold-300 focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+
+            <!-- Brand Logo -->
+            <a href="#" class="flex flex-col items-center group">
+                <span class="font-heading text-2xl sm:text-3xl font-bold tracking-wider gold-gradient-text">TAYYIBAH</span>
+                <span class="text-[9px] sm:text-[10px] tracking-[0.3em] uppercase text-gold-400/80 -mt-1 font-medium">Fragrance</span>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-medium">
+                <a href="#hero" class="text-gold-300 hover:text-gold-400 transition-colors py-1 border-b-2 border-transparent hover:border-gold-500">Home</a>
+                <a href="#collection" class="text-gold-300 hover:text-gold-400 transition-colors py-1 border-b-2 border-transparent hover:border-gold-500">Collection</a>
+                <a href="#heritage" class="text-gold-300 hover:text-gold-400 transition-colors py-1 border-b-2 border-transparent hover:border-gold-500">Heritage</a>
+                <a href="#reviews" class="text-gold-300 hover:text-gold-400 transition-colors py-1 border-b-2 border-transparent hover:border-gold-500">Reviews</a>
+            </nav>
+
+            <!-- Quick Action Icons -->
+            <div class="flex items-center space-x-5">
+                <button onclick="toggleSearch()" class="text-gold-300 hover:text-gold-400 transition-colors p-2" title="Search">
+                    <i class="fa-solid fa-magnifying-glass text-lg"></i>
+                </button>
+                <button onclick="toggleCart()" class="relative text-gold-300 hover:text-gold-400 transition-colors p-2" title="Shopping Bag">
+                    <i class="fa-solid fa-bag-shopping text-xl"></i>
+                    <span id="cart-badge" class="absolute top-0 right-0 bg-gold-500 text-emerald-950 font-bold text-[10px] w-5 h-5 rounded-full flex items-center justify-center border border-emerald-950 shadow-lg hidden">0</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-emerald-950 border-b border-gold-500/30 px-4 pt-2 pb-6 space-y-3">
+            <a href="#hero" onclick="closeMobileMenu()" class="block py-2 text-gold-300 uppercase tracking-wider text-sm border-b border-emerald-900">Home</a>
+            <a href="#collection" onclick="closeMobileMenu()" class="block py-2 text-gold-300 uppercase tracking-wider text-sm border-b border-emerald-900">Collection</a>
+            <a href="#heritage" onclick="closeMobileMenu()" class="block py-2 text-gold-300 uppercase tracking-wider text-sm border-b border-emerald-900">Heritage</a>
+            <a href="#reviews" onclick="closeMobileMenu()" class="block py-2 text-gold-300 uppercase tracking-wider text-sm">Reviews</a>
+        </div>
+    </header>
+
+    <div id="search-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
+        <div class="max-w-2xl w-full glass-panel p-6 rounded-2xl relative border border-gold-500/40">
+            <button onclick="toggleSearch()" class="absolute top-4 right-4 text-gold-400 hover:text-gold-200 text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 class="font-heading text-xl text-gold-300 mb-4">Search Tayyibah Collection</h3>
+            <div class="relative">
+                <input type="text" id="search-input" onkeyup="filterSearch()" placeholder="Search by name (e.g., Tahara, Oud, Rose, Musk)..." class="w-full bg-emerald-950 border border-gold-500/40 rounded-xl px-4 py-3 text-gold-200 placeholder-gold-500/50 focus:outline-none focus:border-gold-400">
+                <i class="fa-solid fa-search absolute right-4 top-3.5 text-gold-500/70"></i>
+            </div>
+            <div id="search-results" class="mt-4 max-h-60 overflow-y-auto space-y-2">
+                <!-- Search dynamic items inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <section id="hero" class="relative min-h-[85vh] flex items-center justify-center overflow-hidden py-20 px-4">
+        <!-- Background Ambient Lighting -->
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-emerald-800/40 via-emerald-950 to-emerald-950 -z-10"></div>
+        <div class="absolute top-1/4 left-10 w-72 h-72 bg-gold-500/10 rounded-full blur-3xl -z-10"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-emerald-700/20 rounded-full blur-3xl -z-10"></div>
+
+        <div class="max-w-5xl mx-auto text-center space-y-8 z-10">
+            <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full glass-panel border border-gold-500/40 text-gold-300 text-xs tracking-widest uppercase mb-2">
+                <i class="fa-solid fa-crown text-gold-400"></i>
+                <span>Artisanal Perfume Oils</span>
+            </div>
+            
+            <h1 class="font-heading text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight leading-tight gold-gradient-text">
+                Timeless Scents,<br>Pure Heritage.
+            </h1>
+            
+            <p class="text-gold-200/80 text-base sm:text-lg max-w-2xl mx-auto font-light leading-relaxed">
+                Experience the uncompromised richness of concentrated, alcohol-free attars crafted with rare botanical extracts, precious agarwood, and velvety pure musks.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                <a href="#collection" class="w-full sm:w-auto px-8 py-4 rounded-xl gold-gradient-bg text-emerald-950 font-bold uppercase tracking-wider text-sm shadow-xl hover:opacity-90 transition-all transform hover:-translate-y-0.5 text-center">
+                    Explore Collection
+                </a>
+                <a href="#discovery" class="w-full sm:w-auto px-8 py-4 rounded-xl glass-panel text-gold-300 font-semibold border border-gold-500/40 hover:border-gold-400 uppercase tracking-wider text-sm transition-all text-center">
+                    Discovery Set
+                </a>
+            </div>
+
+            <!-- Key Features Icons -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-12 border-t border-gold-500/20 max-w-4xl mx-auto text-gold-300/90 text-xs sm:text-sm">
+                <div class="flex flex-col items-center space-y-2">
+                    <i class="fa-solid fa-droplet text-gold-400 text-xl"></i>
+                    <span class="font-medium">100% Alcohol-Free</span>
+                </div>
+                <div class="flex flex-col items-center space-y-2">
+                    <i class="fa-solid fa-hourglass-half text-gold-400 text-xl"></i>
+                    <span class="font-medium">Long Lasting Sillage</span>
+                </div>
+                <div class="flex flex-col items-center space-y-2">
+                    <i class="fa-solid fa-leaf text-gold-400 text-xl"></i>
+                    <span class="font-medium">Ethically Sourced</span>
+                </div>
+                <div class="flex flex-col items-center space-y-2">
+                    <i class="fa-solid fa-box-open text-gold-400 text-xl"></i>
+                    <span class="font-medium">Luxury Packaging</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="collection" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center space-y-3 mb-12">
+            <span class="text-gold-400 uppercase tracking-[0.25em] text-xs font-semibold">Curated Attars</span>
+            <h2 class="font-heading text-3xl sm:text-4xl font-bold gold-gradient-text">The Fragrance Collection</h2>
+            <div class="w-24 h-0.5 gold-gradient-bg mx-auto rounded-full"></div>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-12">
+            <button onclick="filterCollection('all')" class="tab-btn active px-5 py-2.5 rounded-xl border border-gold-500/30 text-xs sm:text-sm font-medium tracking-wider uppercase transition-all bg-gold-500 text-emerald-950 font-bold" data-category="all">
+                All Scents
+            </button>
+            <button onclick="filterCollection('musk')" class="tab-btn px-5 py-2.5 rounded-xl border border-gold-500/30 text-xs sm:text-sm font-medium tracking-wider uppercase transition-all glass-panel text-gold-300 hover:border-gold-400" data-category="musk">
+                Pure Musks
+            </button>
+            <button onclick="filterCollection('mukhallat')" class="tab-btn px-5 py-2.5 rounded-xl border border-gold-500/30 text-xs sm:text-sm font-medium tracking-wider uppercase transition-all glass-panel text-gold-300 hover:border-gold-400" data-category="mukhallat">
+                Artisanal Mukhallats
+            </button>
+            <button onclick="filterCollection('oud')" class="tab-btn px-5 py-2.5 rounded-xl border border-gold-500/30 text-xs sm:text-sm font-medium tracking-wider uppercase transition-all glass-panel text-gold-300 hover:border-gold-400" data-category="oud">
+                Traditional & Oud
+            </button>
+        </div>
+
+        <!-- Product Grid -->
+        <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Dynamic Injection by JS -->
+        </div>
+    </section>
+
+    <section id="discovery" class="py-16 px-4 max-w-7xl mx-auto">
+        <div class="glass-panel rounded-3xl p-8 sm:p-12 relative overflow-hidden border border-gold-500/40 bg-gradient-to-r from-emerald-950 via-emerald-900 to-emerald-950">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="space-y-6">
+                    <span class="inline-block px-3 py-1 rounded-full bg-gold-500/20 text-gold-300 text-xs font-semibold tracking-wider uppercase border border-gold-500/30">Limited Edition Offer</span>
+                    <h3 class="font-heading text-3xl sm:text-4xl font-bold gold-gradient-text">Tayyibah Royal Discovery Set</h3>
+                    <p class="text-gold-200/80 text-sm leading-relaxed">
+                        Unsure where to begin your scent journey? Sample 5 of our iconic attars in 3ml sampler vials (Musk Tahara, Oud & Roses, Jannatul Firdous, Mukhallat Dahabi, White Oud). Includes a ₹200 voucher towards your full bottle purchase.
+                    </p>
+                    <div class="flex items-center space-x-4">
+                        <span class="text-2xl font-bold text-gold-300">₹499</span>
+                        <span class="text-sm text-gold-500/60 line-through">₹799</span>
+                        <span class="bg-red-900/50 text-red-300 text-xs px-2.5 py-1 rounded-md border border-red-500/30 font-semibold">Save 37%</span>
+                    </div>
+                    <button onclick="addDiscoveryToCart()" class="px-8 py-3.5 rounded-xl gold-gradient-bg text-emerald-950 font-bold uppercase tracking-wider text-xs shadow-lg hover:opacity-90 transition-all flex items-center space-x-2">
+                        <i class="fa-solid fa-cart-plus text-base"></i>
+                        <span>Add Discovery Set to Bag</span>
+                    </button>
+                </div>
+                <div class="flex justify-center relative">
+                    <div class="w-64 h-64 sm:w-80 sm:h-80 rounded-2xl bg-gradient-to-br from-gold-500/20 to-transparent p-1 border border-gold-500/30 relative flex items-center justify-center">
+                        <div class="w-full h-full bg-emerald-950 rounded-xl flex flex-col items-center justify-center p-6 text-center space-y-4">
+                            <i class="fa-solid fa-box-tissue text-6xl text-gold-400 mb-2"></i>
+                            <span class="font-heading text-lg font-bold text-gold-300">5 x 3ml Sampler Vials</span>
+                            <span class="text-xs text-gold-400/70">Signature Gold Velvet Box</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="heritage" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-gold-500/20">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <span class="text-gold-400 uppercase tracking-[0.25em] text-xs font-semibold">Authentic Craftsmanship</span>
+                <h2 class="font-heading text-3xl sm:text-5xl font-bold gold-gradient-text">Rooted in Tradition, Crafted in Purity</h2>
+                <div class="w-20 h-0.5 gold-gradient-bg rounded-full"></div>
+                <p class="text-gold-200/80 text-sm sm:text-base leading-relaxed font-light">
+                    For centuries, the art of Eastern perfumery has relied on the delicate balance of heat, copper stills, and natural maceration. At Tayyibah Fragrance, we honor this timeless legacy by eschewing synthetic fillers and harsh industrial alcohols.
+                </p>
+                <div class="space-y-4 pt-2">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-10 h-10 rounded-xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-flask text-gold-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-heading font-semibold text-gold-300 text-base">Hydro-Distilled Botanicals</h4>
+                            <p class="text-xs text-gold-200/70 mt-1">Sourced from wild Taif roses, aged Assam agarwood, and precious resins extracted in traditional copper Degs.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="w-10 h-10 rounded-xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-hand-holding-heart text-gold-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-heading font-semibold text-gold-300 text-base">Velvety Skin-Safe Bases</h4>
+                            <p class="text-xs text-gold-200/70 mt-1">Concentrated oil formulations that bind to your natural pulse points for long-lasting, intimate sillage.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Visual Cards Mosaic -->
+            <div class="grid grid-cols-2 gap-4">
+                <div class="glass-panel p-6 rounded-2xl border border-gold-500/30 space-y-3 flex flex-col justify-between h-48">
+                    <i class="fa-solid fa-seedling text-3xl text-gold-400"></i>
+                    <div>
+                        <span class="font-heading text-lg font-bold text-gold-300 block">Sustainably Sourced</span>
+                        <span class="text-xs text-gold-200/60">Respecting nature’s harvest</span>
+                    </div>
+                </div>
+                <div class="glass-panel p-6 rounded-2xl border border-gold-500/30 space-y-3 flex flex-col justify-between h-48 mt-6">
+                    <i class="fa-solid fa-award text-3xl text-gold-400"></i>
+                    <div>
+                        <span class="font-heading text-lg font-bold text-gold-300 block">Master Blended</span>
+                        <span class="text-xs text-gold-200/60">Curated by heritage perfumers</span>
+                    </div>
+                </div>
+                <div class="glass-panel p-6 rounded-2xl border border-gold-500/30 space-y-3 flex flex-col justify-between h-48">
+                    <i class="fa-solid fa-gem text-3xl text-gold-400"></i>
+                    <div>
+                        <span class="font-heading text-lg font-bold text-gold-300 block">Uncut Oils</span>
+                        <span class="text-xs text-gold-200/60">Maximum concentration</span>
+                    </div>
+                </div>
+                <div class="glass-panel p-6 rounded-2xl border border-gold-500/30 space-y-3 flex flex-col justify-between h-48 mt-6">
+                    <i class="fa-solid fa-heart text-3xl text-gold-400"></i>
+                    <div>
+                        <span class="font-heading text-lg font-bold text-gold-300 block">Cruelty Free</span>
+                        <span class="text-xs text-gold-200/60">Wholesome & ethical</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-gold-500/20">
+        <div class="text-center space-y-3 mb-12">
+            <span class="text-gold-400 uppercase tracking-[0.25em] text-xs font-semibold">Testimonials</span>
+            <h2 class="font-heading text-3xl sm:text-4xl font-bold gold-gradient-text">Words from Connoisseurs</h2>
+            <div class="w-24 h-0.5 gold-gradient-bg mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="glass-panel p-6 rounded-2xl border border-gold-500/30 space-y-4">
+                <div class="flex text-gold-400 text-xs space-x-1">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-xs sm:text-sm text-gold-200/80 italic leading-relaxed">
+                    "Musk Tahara is hands down the cleanest, softest scent I have ever worn. The oil texture feels so velvety on skin and lasts all day through work."
+                </p>
+                <div class="pt-2 border-t border-gold-500/10 flex justify-between items-center text-xs">
+                    <span class="font-bold text-gold-300">Tariq M.</span>
+                    <span class="text-gold-500/60">Verified Buyer</span>
+                </div>
+            </div>
+
+            <div class="glass-panel p-6 rounded-2xl border border-gold-500/30 space-y-4">
+                <div class="flex text-gold-400 text-xs space-x-1">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-xs sm:text-sm text-gold-200/80 italic leading-relaxed">
+                    "Oud & Roses hits that perfect balance between deep woody agarwood and fresh damask rose. The 12ml octagonal bottle looks like a royal jewel on my dresser!"
+                </p>
+                <div class="pt-2 border-t border-gold-500/10 flex justify-between items-center text-xs">
+                    <span class="font-bold text-gold-300">Aisha K.</span>
+                    <span class="text-gold-500/60">Verified Buyer</span>
+                </div>
+            </div>
+
+            <div class="glass-panel p-6 rounded-2xl border border-gold-500/30 space-y-4">
+                <div class="flex text-gold-400 text-xs space-x-1">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-xs sm:text-sm text-gold-200/80 italic leading-relaxed">
+                    "Mukhallat Dahabi has an unbelievable saffron note. You can immediately feel the quality of raw oils used. Unmatched luxury at this price point."
+                </p>
+                <div class="pt-2 border-t border-gold-500/10 flex justify-between items-center text-xs">
+                    <span class="font-bold text-gold-300">Zaid H.</span>
+                    <span class="text-gold-500/60">Verified Buyer</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="cart-drawer" class="fixed inset-y-0 right-0 w-full max-w-md bg-emerald-950 border-l border-gold-500/30 shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+        <!-- Cart Header -->
+        <div class="p-6 border-b border-gold-500/20 flex justify-between items-center bg-emerald-900/50">
+            <div class="flex items-center space-x-3">
+                <i class="fa-solid fa-bag-shopping text-gold-400 text-xl"></i>
+                <h3 class="font-heading text-lg font-bold text-gold-300">Your Shopping Bag</h3>
+            </div>
+            <button onclick="toggleCart()" class="text-gold-400 hover:text-gold-200 text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <!-- Cart Items Container -->
+        <div id="cart-items" class="flex-1 overflow-y-auto p-6 space-y-4">
+            <!-- Dynamic Cart Items -->
+        </div>
+
+        <!-- Cart Footer -->
+        <div class="p-6 border-t border-gold-500/20 glass-panel space-y-4">
+            <div class="flex justify-between items-center text-sm">
+                <span class="text-gold-200/70">Subtotal</span>
+                <span id="cart-subtotal" class="font-bold text-gold-300 text-lg">₹0</span>
+            </div>
+            <p class="text-[11px] text-gold-400/60">Taxes calculated at checkout. Free shipping on orders over ₹999.</p>
+            <button onclick="checkout()" class="w-full py-3.5 rounded-xl gold-gradient-bg text-emerald-950 font-bold uppercase tracking-wider text-xs shadow-lg hover:opacity-90 transition-all flex justify-center items-center space-x-2">
+                <span>Proceed to Checkout</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <div id="quickview-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
+        <div class="max-w-2xl w-full glass-panel p-6 sm:p-8 rounded-3xl relative border border-gold-500/40 max-h-[90vh] overflow-y-auto">
+            <button onclick="closeQuickView()" class="absolute top-4 right-4 text-gold-400 hover:text-gold-200 text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="modal-content">
+                <!-- Modal details injected here -->
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-emerald-950 border-t border-gold-500/30 text-gold-200/80 pt-16 pb-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-gold-500/20">
+            <!-- Brand Info -->
+            <div class="space-y-4 md:col-span-1">
+                <div class="flex flex-col">
+                    <span class="font-heading text-2xl font-bold gold-gradient-text">TAYYIBAH</span>
+                    <span class="text-[9px] tracking-[0.3em] uppercase text-gold-400/80 -mt-1 font-medium">Fragrance</span>
+                </div>
+                <p class="text-xs text-gold-200/70 leading-relaxed font-light">
+                    Crafting non-alcoholic, artisanal perfume oils with raw Eastern botanicals, precious agarwood, and white musks.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="space-y-3">
+                <h4 class="font-heading text-gold-300 font-semibold text-sm uppercase tracking-wider">Quick Links</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="#collection" class="hover:text-gold-400 transition-colors">Pure Musks Collection</a></li>
+                    <li><a href="#collection" class="hover:text-gold-400 transition-colors">Artisanal Mukhallats</a></li>
+                    <li><a href="#collection" class="hover:text-gold-400 transition-colors">Traditional & Oud</a></li>
+                    <li><a href="#discovery" class="hover:text-gold-400 transition-colors">Discovery Sampler Set</a></li>
+                </ul>
+            </div>
+
+            <!-- Customer Service -->
+            <div class="space-y-3">
+                <h4 class="font-heading text-gold-300 font-semibold text-sm uppercase tracking-wider">Customer Care</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="#" class="hover:text-gold-400 transition-colors">Shipping & Delivery</a></li>
+                    <li><a href="#" class="hover:text-gold-400 transition-colors">Returns & Exchanges</a></li>
+                    <li><a href="#" class="hover:text-gold-400 transition-colors">Care & Application Guide</a></li>
+                    <li><a href="#" class="hover:text-gold-400 transition-colors">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter Signup -->
+            <div class="space-y-3">
+                <h4 class="font-heading text-gold-300 font-semibold text-sm uppercase tracking-wider">Join The Circle</h4>
+                <p class="text-xs text-gold-200/70">Subscribe to receive exclusive access to small-batch releases.</p>
+                <form onsubmit="event.preventDefault(); alert('Thank you for subscribing to Tayyibah Fragrance!');" class="space-y-2">
+                    <input type="email" required placeholder="Enter your email" class="w-full bg-emerald-900/50 border border-gold-500/30 rounded-lg px-3 py-2 text-xs text-gold-200 placeholder-gold-500/50 focus:outline-none focus:border-gold-400">
+                    <button type="submit" class="w-full py-2.5 rounded-lg gold-gradient-bg text-emerald-950 font-bold text-xs uppercase tracking-wider hover:opacity-90">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-gold-400/60 space-y-4 sm:space-y-0">
+            <p>© 2026 Tayyibah Fragrance. All rights reserved.</p>
+            <div class="flex space-x-4 text-base">
+                <a href="#" class="hover:text-gold-300"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-gold-300"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="hover:text-gold-300"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Fragrance Data Array
+        const products = [
+            {
+                id: 1,
+                name: "Musk Tahara",
+                category: "musk",
+                tagline: "Pure Velvet White Musk",
+                desc: "The ultimate benchmark of purity. A thick, velvety white musk with clean, cotton-soft accords and a subtle floral undertone.",
+                p6ml: 400,
+                p12ml: 650,
+                selectedSize: '6ml',
+                top: "Clean Cotton",
+                heart: "Jasmine, White Lily",
+                base: "Velvet White Musk",
+                badge: "Best Seller",
+                icon: "fa-droplet"
+            },
+            {
+                id: 2,
+                name: "Desert Oud Tahara",
+                category: "oud",
+                tagline: "Wood & Musk Fusion",
+                desc: "A warm, mysterious blend that fuses the silky, clean texture of Tahara musk with smoky, dry agarwood and golden amber.",
+                p6ml: 450,
+                p12ml: 750,
+                selectedSize: '6ml',
+                top: "Warm Amber",
+                heart: "Soft White Musk",
+                base: "Dry Agarwood, Cedar",
+                badge: "Popular",
+                icon: "fa-fire"
+            },
+            {
+                id: 3,
+                name: "Jannatul Firdous",
+                category: "oud",
+                tagline: "Classic Botanical Green",
+                desc: "A classic, vibrant green attar. Bright herbal top notes open into a heart of wild lotus and rich spice, grounded by cool moss.",
+                p6ml: 450,
+                p12ml: 750,
+                selectedSize: '6ml',
+                top: "Wild Lotus, Green Herbs",
+                heart: "Gardenia, Oriental Spices",
+                base: "Oakmoss, Vetiver",
+                badge: "Heritage Classic",
+                icon: "fa-leaf"
+            },
+            {
+                id: 4,
+                name: "Mukhallat Dahabi",
+                category: "mukhallat",
+                tagline: "Royal Saffron & Gold Amber",
+                desc: "A luxurious, golden blend. Warm saffron and amber mingle with precious woods and a hint of sweet resin for a royal sillage.",
+                p6ml: 500,
+                p12ml: 900,
+                selectedSize: '6ml',
+                top: "Golden Saffron",
+                heart: "Rose, Amber Resin",
+                base: "Sandalwood, Aged Agarwood",
+                badge: "Royal Reserve",
+                icon: "fa-crown"
+            },
+            {
+                id: 5,
+                name: "Mukhallat Badar",
+                category: "mukhallat",
+                tagline: "Deep Amber & Patchouli",
+                desc: "Deep, dark, and enigmatic like a full moon night. Earthy patchouli and spicy accords overlay an aged woody base.",
+                p6ml: 500,
+                p12ml: 900,
+                selectedSize: '6ml',
+                top: "Warm Spices",
+                heart: "Patchouli, Floral Accords",
+                base: "Aged Oud, Dark Amber",
+                badge: "Evening Reserve",
+                icon: "fa-moon"
+            },
+            {
+                id: 6,
+                name: "Musk Rose",
+                category: "musk",
+                tagline: "Taif Rose & Soft Musk",
+                desc: "A balanced harmony of dewy Taif rose petals layered over a soft, velvety musk base. Elegant, romantic, and uplifting.",
+                p6ml: 400,
+                p12ml: 650,
+                selectedSize: '6ml',
+                top: "Taif Rose Petals",
+                heart: "Dewy Floral Notes",
+                base: "Creamy White Musk",
+                badge: "Customer Favorite",
+                icon: "fa-spa"
+            },
+            {
+                id: 7,
+                name: "Musk Afreen",
+                category: "musk",
+                tagline: "Spicy Powdery Musk",
+                desc: "An alluring, powdery musk infused with warm oriental spices and soft floral accents. Smoothly balanced for long-lasting depth.",
+                p6ml: 400,
+                p12ml: 650,
+                selectedSize: '6ml',
+                top: "Oriental Spices",
+                heart: "Powdered Iris",
+                base: "Soft Musk, Warm Amber",
+                badge: "New",
+                icon: "fa-wand-magic-sparkles"
+            },
+            {
+                id: 8,
+                name: "Oud & Roses",
+                category: "oud",
+                tagline: "Cambodian Oud & Damask Rose",
+                desc: "The iconic Eastern duo. Rich, resinous Cambodian oud paired against a blooming heart of damask rose.",
+                p6ml: 500,
+                p12ml: 900,
+                selectedSize: '6ml',
+                top: "Damask Rose",
+                heart: "Saffron, Geranium",
+                base: "Cambodian Oud, Wood Resins",
+                badge: "Masterpiece",
+                icon: "fa-gem"
+            },
+            {
+                id: 9,
+                name: "White Oud",
+                category: "oud",
+                tagline: "Luminous Smooth Oud",
+                desc: "A smooth, luminous take on traditional agarwood. Fuses light wood accords with white amber and subtle vanilla.",
+                p6ml: 450,
+                p12ml: 750,
+                selectedSize: '6ml',
+                top: "White Amber",
+                heart: "Gentle Spice",
+                base: "Soft Agarwood, Vanilla",
+                badge: "Smooth Wear",
+                icon: "fa-sun"
+            },
+            {
+                id: 10,
+                name: "Musk Rizali",
+                category: "musk",
+                tagline: "Fresh Aromatic Musk",
+                desc: "A crisp, refined aromatic musk featuring cool herbal top notes, sharp citrus highlights, and a clean dry woody base.",
+                p6ml: 400,
+                p12ml: 650,
+                selectedSize: '6ml',
+                top: "Crisp Citrus, Herbal Notes",
+                heart: "Aromatic Spices",
+                base: "Clean Musk, Light Cedar",
+                badge: "Fresh Wear",
+                icon: "fa-wind"
+            }
+        ];
+
+        let cart = [];
+
+        function renderProducts(filter = 'all') {
+            const container = document.getElementById('product-grid');
+            container.innerHTML = '';
+
+            const filtered = filter === 'all' ? products : products.filter(p => p.category === filter);
+
+            filtered.forEach(p => {
+                const currentPrice = p.selectedSize === '6ml' ? p.p6ml : p.p12ml;
+
+                const card = document.createElement('div');
+                card.className = "glass-panel rounded-2xl p-5 border border-gold-500/20 hover:border-gold-500/60 transition-all duration-300 flex flex-col justify-between group relative";
+                
+                card.innerHTML = `
+                    <div>
+                        <!-- Top Badge & Icon -->
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-gold-500/10 text-gold-400 border border-gold-500/30">${p.badge}</span>
+                            <i class="fa-solid ${p.icon} text-gold-400/80 text-lg"></i>
+                        </div>
+
+                        <!-- Product Bottle Placeholder Artwork -->
+                        <div class="h-44 bg-gradient-to-b from-emerald-900/40 to-emerald-950 rounded-xl mb-4 border border-gold-500/10 flex flex-col items-center justify-center relative p-4 group-hover:scale-[1.02] transition-transform">
+                            <div class="w-16 h-28 border-2 border-gold-400/60 rounded-lg flex flex-col items-center justify-center p-2 relative shadow-lg bg-emerald-950/60">
+                                <div class="w-8 h-6 bg-gold-500/80 rounded-t-md -mt-8 border border-gold-300 mb-2"></div>
+                                <span class="font-heading text-[9px] font-bold text-gold-300 text-center leading-tight">${p.name}</span>
+                                <span class="text-[7px] text-gold-400/70 uppercase mt-1">Attar Oil</span>
+                            </div>
+                        </div>
+
+                        <!-- Title & Description -->
+                        <h3 class="font-heading text-lg font-bold text-gold-300">${p.name}</h3>
+                        <p class="text-xs text-gold-400/80 font-medium mb-1">${p.tagline}</p>
+                        <p class="text-xs text-gold-200/60 line-clamp-2 mb-4 font-light">${p.desc}</p>
+                    </div>
+
+                    <div class="space-y-4 pt-2 border-t border-gold-500/10">
+                        <!-- Size Switcher -->
+                        <div class="flex items-center justify-between text-xs">
+                            <span class="text-gold-200/60">Bottle Size:</span>
+                            <div class="flex bg-emerald-950 rounded-lg p-1 border border-gold-500/30">
+                                <button onclick="changeSize(${p.id}, '6ml')" class="px-2 py-0.5 rounded text-[11px] font-semibold transition-colors ${p.selectedSize === '6ml' ? 'bg-gold-500 text-emerald-950' : 'text-gold-300'}">6ml</button>
+                                <button onclick="changeSize(${p.id}, '12ml')" class="px-2 py-0.5 rounded text-[11px] font-semibold transition-colors ${p.selectedSize === '12ml' ? 'bg-gold-500 text-emerald-950' : 'text-gold-300'}">12ml</button>
+                            </div>
+                        </div>
+
+                        <!-- Price & Action CTA -->
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-gold-200/50 block">Price</span>
+                                <span class="text-xl font-bold text-gold-300">₹${currentPrice}</span>
+                            </div>
+                            <div class="flex space-x-2">
+                                <button onclick="openQuickView(${p.id})" class="p-2.5 rounded-xl glass-panel border border-gold-500/30 text-gold-300 hover:border-gold-400" title="View Notes">
+                                    <i class="fa-solid fa-eye text-xs"></i>
+                                </button>
+                                <button onclick="addToCart(${p.id})" class="px-3 py-2.5 rounded-xl gold-gradient-bg text-emerald-950 font-bold text-xs uppercase tracking-wider hover:opacity-90 flex items-center space-x-1">
+                                    <i class="fa-solid fa-cart-plus"></i>
+                                    <span>Add</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function changeSize(productId, size) {
+            const product = products.find(p => p.id === productId);
+            if (product) {
+                product.selectedSize = size;
+                renderProducts(document.querySelector('.tab-btn.active').dataset.category);
+            }
+        }
+
+        function filterCollection(category) {
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                if (btn.dataset.category === category) {
+                    btn.className = "tab-btn active px-5 py-2.5 rounded-xl border border-gold-500/30 text-xs sm:text-sm font-medium tracking-wider uppercase transition-all bg-gold-500 text-emerald-950 font-bold";
+                } else {
+                    btn.className = "tab-btn px-5 py-2.5 rounded-xl border border-gold-500/30 text-xs sm:text-sm font-medium tracking-wider uppercase transition-all glass-panel text-gold-300 hover:border-gold-400";
+                }
+            });
+            renderProducts(category);
+        }
+
+        function openQuickView(productId) {
+            const p = products.find(prod => prod.id === productId);
+            if (!p) return;
+
+            const modal = document.getElementById('quickview-modal');
+            const content = document.getElementById('modal-content');
+
+            const currentPrice = p.selectedSize === '6ml' ? p.p6ml : p.p12ml;
+
+            content.innerHTML = `
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                    <div class="h-64 bg-emerald-950 rounded-2xl border border-gold-500/30 flex flex-col items-center justify-center relative p-6">
+                        <div class="w-20 h-36 border-2 border-gold-400/80 rounded-xl flex flex-col items-center justify-center p-3 shadow-2xl bg-emerald-900/40">
+                            <div class="w-10 h-8 bg-gold-500 rounded-t-md -mt-11 border border-gold-200 mb-3"></div>
+                            <span class="font-heading text-xs font-bold text-gold-300 text-center">${p.name}</span>
+                            <span class="text-[8px] text-gold-400/80 uppercase mt-2">Pure Concentrated Attar</span>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <span class="text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-gold-500/10 text-gold-400 border border-gold-500/30">${p.badge}</span>
+                        <h3 class="font-heading text-2xl font-bold text-gold-300">${p.name}</h3>
+                        <p class="text-xs text-gold-200/80 leading-relaxed font-light">${p.desc}</p>
+                        
+                        <!-- Fragrance Pyramids -->
+                        <div class="space-y-2 pt-2 border-t border-gold-500/20 text-xs">
+                            <div class="flex"><span class="w-20 font-semibold text-gold-400">Top Notes:</span><span class="text-gold-200/80">${p.top}</span></div>
+                            <div class="flex"><span class="w-20 font-semibold text-gold-400">Heart Notes:</span><span class="text-gold-200/80">${p.heart}</span></div>
+                            <div class="flex"><span class="w-20 font-semibold text-gold-400">Base Notes:</span><span class="text-gold-200/80">${p.base}</span></div>
+                        </div>
+
+                        <div class="flex items-center justify-between pt-4 border-t border-gold-500/20">
+                            <div>
+                                <span class="text-xs text-gold-200/60 block">Selected Price (${p.selectedSize})</span>
+                                <span class="text-2xl font-bold text-gold-300">₹${currentPrice}</span>
+                            </div>
+                            <button onclick="addToCart(${p.id}); closeQuickView();" class="px-6 py-3 rounded-xl gold-gradient-bg text-emerald-950 font-bold text-xs uppercase tracking-wider hover:opacity-90">
+                                Add to Bag
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            modal.classList.remove('hidden');
+        }
+
+        function closeQuickView() {
+            document.getElementById('quickview-modal').classList.add('hidden');
+        }
+
+        function addToCart(productId) {
+            const p = products.find(prod => prod.id === productId);
+            if (!p) return;
+
+            const size = p.selectedSize;
+            const price = size === '6ml' ? p.p6ml : p.p12ml;
+
+            const existingIndex = cart.findIndex(item => item.id === p.id && item.size === size);
+
+            if (existingIndex > -1) {
+                cart[existingIndex].qty += 1;
+            } else {
+                cart.push({
+                    id: p.id,
+                    name: p.name,
+                    size: size,
+                    price: price,
+                    qty: 1
+                });
+            }
+
+            updateCartUI();
+            toggleCart(true); // Open drawer
+        }
+
+        function addDiscoveryToCart() {
+            const existingIndex = cart.findIndex(item => item.id === 999);
+            if (existingIndex > -1) {
+                cart[existingIndex].qty += 1;
+            } else {
+                cart.push({
+                    id: 999,
+                    name: "Royal Discovery Sampler Set",
+                    size: "5 x 3ml",
+                    price: 499,
+                    qty: 1
+                });
+            }
+            updateCartUI();
+            toggleCart(true);
+        }
+
+        function updateCartUI() {
+            const cartItemsContainer = document.getElementById('cart-items');
+            const cartBadge = document.getElementById('cart-badge');
+            const subtotalEl = document.getElementById('cart-subtotal');
+
+            const totalCount = cart.reduce((sum, item) => sum += item.qty, 0);
+            const totalSubtotal = cart.reduce((sum, item) => sum += (item.price * item.qty), 0);
+
+            if (totalCount > 0) {
+                cartBadge.textContent = totalCount;
+                cartBadge.classList.remove('hidden');
+            } else {
+                cartBadge.classList.add('hidden');
+            }
+
+            subtotalEl.textContent = `₹${totalSubtotal}`;
+
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = `
+                    <div class="text-center py-12 text-gold-400/60 space-y-3">
+                        <i class="fa-solid fa-bag-shopping text-4xl"></i>
+                        <p class="text-xs">Your shopping bag is empty.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            cartItemsContainer.innerHTML = cart.map((item, index) => `
+                <div class="flex items-center justify-between p-3 rounded-xl glass-panel border border-gold-500/20 text-xs">
+                    <div class="space-y-1">
+                        <h4 class="font-heading font-bold text-gold-300">${item.name}</h4>
+                        <p class="text-gold-400/70">Size: ${item.size} | ₹${item.price}</p>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="flex items-center border border-gold-500/30 rounded bg-emerald-950">
+                            <button onclick="updateQty(${index}, -1)" class="px-2 py-0.5 text-gold-300 hover:text-gold-100">-</button>
+                            <span class="px-2 font-semibold text-gold-300">${item.qty}</span>
+                            <button onclick="updateQty(${index}, 1)" class="px-2 py-0.5 text-gold-300 hover:text-gold-100">+</button>
+                        </div>
+                        <button onclick="removeItem(${index})" class="text-red-400/80 hover:text-red-300"><i class="fa-solid fa-trash-can"></i></button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function updateQty(index, change) {
+            if (cart[index]) {
+                cart[index].qty += change;
+                if (cart[index].qty <= 0) {
+                    cart.splice(index, 1);
+                }
+                updateCartUI();
+            }
+        }
+
+        function removeItem(index) {
+            cart.splice(index, 1);
+            updateCartUI();
+        }
+
+        function toggleCart(forceOpen = false) {
+            const drawer = document.getElementById('cart-drawer');
+            if (forceOpen) {
+                drawer.classList.remove('translate-x-full');
+            } else {
+                drawer.classList.toggle('translate-x-full');
+            }
+        }
+
+        function toggleSearch() {
+            const searchModal = document.getElementById('search-modal');
+            searchModal.classList.toggle('hidden');
+            if (!searchModal.classList.contains('hidden')) {
+                document.getElementById('search-input').focus();
+            }
+        }
+
+        function filterSearch() {
+            const query = document.getElementById('search-input').value.toLowerCase();
+            const resultsContainer = document.getElementById('search-results');
+            resultsContainer.innerHTML = '';
+
+            if (query.trim() === '') return;
+
+            const matches = products.filter(p => p.name.toLowerCase().includes(query) || p.desc.toLowerCase().includes(query));
+
+            if (matches.length === 0) {
+                resultsContainer.innerHTML = `<p class="text-xs text-gold-400/60 p-2">No fragrances matched your search query.</p>`;
+                return;
+            }
+
+            matches.forEach(p => {
+                const div = document.createElement('div');
+                div.className = "p-3 rounded-xl border border-gold-500/20 glass-panel flex justify-between items-center text-xs hover:border-gold-400 cursor-pointer";
+                div.onclick = () => {
+                    toggleSearch();
+                    openQuickView(p.id);
+                };
+                div.innerHTML = `
+                    <div>
+                        <span class="font-heading font-bold text-gold-300 block">${p.name}</span>
+                        <span class="text-gold-400/70 text-[10px]">${p.tagline}</span>
+                    </div>
+                    <span class="font-bold text-gold-300">₹${p.p6ml} - ₹${p.p12ml}</span>
+                `;
+                resultsContainer.appendChild(div);
+            });
+        }
+
+        // Mobile drawer nav toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        function closeMobileMenu() {
+            document.getElementById('mobile-menu').classList.add('hidden');
+        }
+
+        // Checkout helper
+        function checkout() {
+            if (cart.length === 0) {
+                alert("Your shopping bag is empty!");
+                return;
+            }
+            alert("Thank you for choosing Tayyibah Fragrance! This completes the mock checkout process.");
+            cart = [];
+            updateCartUI();
+            toggleCart();
+        }
+
+        // Initialize application on window load
+        window.onload = function() {
+            renderProducts();
+            updateCartUI();
+        };
+    </script>
+</body>
+</html>
